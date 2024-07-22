@@ -81,3 +81,130 @@ Machen Sie Ihre HTML-Seite responsive, indem Sie folgendes CSS hinzufügen:
     </ul>
 </body>
 </html>
+
+### aboutHTML
+```html
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über mich</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">Über mich</a>
+        <a href="contact.html">Kontakt</a>
+    </nav>
+    <h1>Über mich</h1>
+    <p>Hier können Sie mehr über mich erfahren...</p>
+</body>
+</html>
+
+
+### contactHTML
+```html
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">Über mich</a>
+        <a href="contact.html">Kontakt</a>
+    </nav>
+    <h1>Kontakt</h1>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">E-Mail:</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="message">Nachricht:</label>
+        <textarea id="message" name="message" rows="5" required></textarea><br>
+        <button type="submit">Absenden</button>
+    </form>
+</body>
+</html>
+
+### stylesCSS
+´´´css
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #003366;
+}
+
+p {
+    font-size: 16px;
+    color: #333333;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #003366;
+    margin: 0 20px;
+}
+
+@media (max-width: 600px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav a {
+        margin: 10px 0;
+    }
+}
+
+### zuätzliches-stylesCSS
+´´´css
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #218838;
+}
